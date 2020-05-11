@@ -21,7 +21,7 @@ weatherForm.addEventListener(('submit'), (e) => {
 	console.log(inputValue)
 	message1.textConten = 'Loading...'
 	message2.textContent = ''
-	fetch('https://api.weatherstack.com/current?access_key=62ad9c85c8f095b3c38bf2f95e86433f&query=' + inputValue)
+	fetch('http://api.weatherstack.com/current?access_key=62ad9c85c8f095b3c38bf2f95e86433f&query=' + inputValue)
 	.then((response) => {
 		response.json().then((data) => {
 			if (data.error) {
@@ -33,6 +33,7 @@ weatherForm.addEventListener(('submit'), (e) => {
 				console.log('precipitation ' + data.current.precip)
 				console.log('humidity ' + data.current.humidity)
 				message2.textContent = data.current.temperature + ' ' + data.current.precip + ' ' + data.current.humidity
+				+ ' ' + data.current.wind_speed
 				mesage1.textContent = ""
 			}
 		})
