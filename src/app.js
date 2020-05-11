@@ -16,6 +16,7 @@ app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 const weather = require('./utils/weather')
+const port = process.env.PORT ||8080
 
 //for static pages in public folder
 app.use(express.static(publicDirectoryPath))
@@ -104,6 +105,6 @@ app.get('*', (request, response) => {
 	})
 })
 
-app.listen(8080, () => {
+app.listen(port, () => {
 	console.log('Listening on port 8080')
 })
