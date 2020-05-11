@@ -21,7 +21,7 @@ weatherForm.addEventListener(('submit'), (e) => {
 	console.log(inputValue)
 	message1.textConten = 'Loading...'
 	message2.textContent = ''
-	fetch('http://api.weatherstack.com/current?access_key=62ad9c85c8f095b3c38bf2f95e86433f&query=' + inputValue)
+	fetch('https://api.weatherstack.com/current?access_key=62ad9c85c8f095b3c38bf2f95e86433f&query=' + inputValue)
 	.then((response) => {
 		response.json().then((data) => {
 			if (data.error) {
