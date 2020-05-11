@@ -34,7 +34,7 @@ weatherForm.addEventListener(('submit'), (e) => {
 				console.log('humidity ' + data.current.humidity)
 				message2.textContent = data.current.temperature + ' ' + data.current.precip + ' ' + data.current.humidity
 				+ ' ' + data.current.wind_speed
-				mesage1.textContent = ""
+				message1.textContent = ""
 			}
 		})
 	})
